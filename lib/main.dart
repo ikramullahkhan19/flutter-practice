@@ -17,6 +17,8 @@ import 'package:flutterpractice/imageViewerFullScreen/imageViewerFullScreenwithp
 import 'package:flutterpractice/movieApp/withProvider/movie_list_screen_p.dart';
 import 'package:flutterpractice/movieApp/withProvider/movie_provider.dart';
 import 'package:flutterpractice/provider/todo_list_provider.dart';
+import 'package:flutterpractice/stopWatchAPP/screens/stop_watch_screen.dart';
+import 'package:flutterpractice/stopWatchAppProvider/utils/stopwatch_provider.dart';
 import 'package:flutterpractice/weatherApp2/screen/w_screen.dart';
 import 'package:flutterpractice/weatherApp2/screen/weather_splash_screen.dart';
 import 'package:flutterpractice/whatApp/chat_list_screen.dart';
@@ -30,6 +32,8 @@ void main() {
       ChangeNotifierProvider(create: (_)=>TodoListProvider()),
       ChangeNotifierProvider(create: (_)=>MovieProvider()),
       ChangeNotifierProvider(create: (_)=>GalleryProvider()),
+      ChangeNotifierProvider(create: (_)=>StopWatchProvider()),
+
 
 
 
@@ -57,7 +61,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)
         // This works for code too, not just values: Most code chang,
       ),
-      home:CalSplashScreen(),
+      home:StopWatchScreenP(),
     );
   }
 }
